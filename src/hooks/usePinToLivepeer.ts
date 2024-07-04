@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import axios from "axios";
 import { livepeer } from "@/assets/constant";
 import { TranscodeProfileEncoder, TranscodeProfileProfile, Type } from "livepeer/models/components"

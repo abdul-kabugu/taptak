@@ -1,4 +1,4 @@
-
+//@ts-nocheck
 
 import React, {useState, useEffect} from 'react'
 import { VideoCard } from '../cards'
@@ -59,7 +59,7 @@ const [allPostswMetadata, setallPostswMetadata] = useState({})
 if(allVidsLoading){
   return(
     <div className='flex flex-col gap-3 w-full '>
-      <ShortsSkeleton  />
+     {/*} <ShortsSkeleton  />*/}
 <VideoCardSpinner />
     </div>
 

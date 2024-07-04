@@ -26,7 +26,7 @@ console.log("comment from card", data)
             </div>
             <div>
                
-                 <h1 className='text-sm md:text-lg text-rose-500 font-semibold'>@{data?.username || "kobabu"}</h1>
+                 <h1 className='text-sm md:text-lg text-green-500 font-semibold'>@{data?.username || "kobabu"}</h1>
                   <h2 className='text-sm md:text-base'>{comment}</h2>
                   <div className='flex items-center gap-3 '>
                      <div className='flex items-center gap-1 cursor-pointer hover:text-rose-500'>

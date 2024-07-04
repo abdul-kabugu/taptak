@@ -65,7 +65,7 @@ export default function Sidebar({toggleOpen, isOpen } : sidebarProps) {
    const pathName = usePathname()
    console.log("the path name ", pathName)
   return (
-<div className={`hidden md:flex   sticky top-0 ${isOpen ? "flex w-[200px] bg-white text-gray-950 dark:bg-gray-950 border-r dark:border-gray-700 border-gray-200 animate-slideInFromLeft" : ! isOpen ? "w-[65px] bg-gray-50 dark:bg-gray-950 border-r  border-gray-300 dark:border-gray-700 animate-slideOutToLeft " : ""}  top-[60px]  h-[calc(100vh-60px)]  xl:mr-3 `}>
+<div className={`hidden md:flex   sticky top-0 ${isOpen ? "flex w-[200px] bg-white text-gray-950 dark:bg-neutral-900 border-r dark:border-gray-900 border-gray-200 animate-slideInFromLeft" : ! isOpen ? "w-[65px] bg-gray-50 dark:bg-neutral-900 border-r  border-gray-300 dark:border-gray-700 animate-slideOutToLeft " : ""}  top-[60px]  h-[calc(100vh-60px)]  xl:mr-3 `}>
  
  <div className=' h-full w-full relative'>
 

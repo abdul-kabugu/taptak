@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <>
     <NextSeo
-   title='Paxfy'
-  description='Paxfy is the  Decentralized video sharing platform Built on avalanche network, in paxfy  you own your social graph, your contents '
+   title='rapu'
+  description='rapu is the  Decentralized video sharing platform Built on avalanche network, in rapu  you own your social graph, your contents '
 />
     <main
      className='min-h-screen w-full '

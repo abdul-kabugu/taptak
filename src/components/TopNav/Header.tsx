@@ -1,4 +1,4 @@
-
+//@ts-nocheck
 
 import React, {useState, useEffect} from 'react'
 import {useTheme} from 'next-themes'
@@ -76,13 +76,13 @@ const {data:userData, isLoading: isUserDataLoading, isError : isUserDataError} =
   };
 
 
-  const userInfo  =  "hello"
+  
 
     
   return (
-    <div className='flex justify-between h-[50px] md:h-[60px] items-center px-2 md:px-4 py-7 sticky top-0 dark:bg-black bg-white/90 z-10 mx-auto    '>
+    <div className='flex justify-between h-[50px] md:h-[60px] items-center px-2 md:px-4 py-7 sticky top-0 dark:bg-black bg-white/90 z-10 mx-auto  border-b border-gray-300 dark:border-gray-900   '>
 		 <div className=' gap-2 items-center flex '>
-			<div className='dark:bg-gray-800/90 cursor-pointer hidden md:flex hover:bg-gray-400/40 bg-gray-300/60 w-9 h-9 rounded-full  items-center justify-center' onClick={toggleSidebar}>
+			<div className='dark:bg-gray-800/90  cursor-pointer hidden md:hidden hover:bg-gray-400/40 bg-gray-300/60 w-9 h-9 rounded-full  items-center justify-center' onClick={toggleSidebar}>
               {!isShowFull ? (
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-7 h-7">
 				<path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
@@ -99,7 +99,7 @@ const {data:userData, isLoading: isUserDataLoading, isError : isUserDataError} =
 			</div>
 			<div className='flex items-center gap-2'>
 		 <Link href={`/`}>
-		<Image  src={`/img/logo.png`}  width={150} height={150} alt='logo' 
+		<Image  src={`/img/logo.jpg`}  width={150} height={150} alt='logo' 
   className='w-7 h-7 rounded-full cursor-pointer'
 />	</Link></div>
 <p className='text-xs font-semibold text-rose-500'>TESTNET</p>
@@ -107,7 +107,7 @@ const {data:userData, isLoading: isUserDataLoading, isError : isUserDataError} =
 	
 
 
- {/*} <SearchVids  />*/}
+  <SearchVids  />
 {/*<ConnectButton>
 		{(status, { connect, selectCharacters }) => {
 			if (status.isConnected) {

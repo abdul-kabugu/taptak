@@ -125,7 +125,7 @@ export default function SearchVids({ setIsSearchOpen }: SearchVProps) {
         </div>
       </div>
     {search.length > 3 && isOpenSearch  &&
-       <div className='w-full bg-background dark:bg-background-light border border-sky-200 min-h-[200px] absolute top-6 py-2 px-3 rounded-lg'>hello  world  </div>
+       <div className='w-full bg-white dark:bg-zinc-950 border border-sky-100 dark:border-zinc-800 min-h-[200px] absolute top-6 py-2 px-3 rounded-lg flex items-center justify-center'>No  result  found </div>
     }
     </div>
   )

@@ -1,3 +1,5 @@
+//@ts-nocheck
+
 import '@/styles/globals.css'
 
 import '@rainbow-me/rainbowkit/styles.css';
@@ -99,12 +101,12 @@ export default function App({ Component, pageProps }: AppProps) {
         <NextNProgress color="#4f46e5" startPosition={0.3} stopDelayMs={200} height={3} showOnShallow={true}  />
          <>
          <DefaultSeo
-            title='Paxfy'
-            description='Paxfy - decentralized video-sharing platform. designed to revolutionize your digital content experience.Take control of your content'
+            title='rapu'
+            description='rapu - decentralized video-sharing platform. designed to revolutionize your digital content experience.Take control of your content'
             openGraph={{
               url: `${WEBSITE_URL}`,
-              title: 'Paxfy',
-              description: 'Paxfy - decentralized video-sharing platform. designed to revolutionize your digital content experience.Take control of your content',
+              title: 'rapu',
+              description: 'rapu - decentralized video-sharing platform. designed to revolutionize your digital content experience.Take control of your content',
               images: [
                 {
                   url: `/img/website-banner.png`,
@@ -124,8 +126,8 @@ export default function App({ Component, pageProps }: AppProps) {
               siteName: `${APP_NAME}`,
             }}
             twitter={{
-              handle: '@paxfy',
-              site: '@paxfy',
+              handle: '@rapu',
+              site: '@rapu',
               cardType: 'summary_large_image',
             }}
          />

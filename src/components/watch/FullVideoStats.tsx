@@ -1,8 +1,10 @@
 
+//@ts-nocheck
+
 import React, {useState, useEffect} from 'react'
 import ShareButtons from '../cards/Share';
 import Modal from '../common/Modal';
-import ABI  from '../../abi/paxfy.json'
+import ABI  from '../../abi/rapu.json'
 import { contractAddress } from '@/assets/constant';
 import { ethers, Contract } from 'ethers';
 import { useUserContext } from '@/providers/UserContext';
@@ -159,13 +161,13 @@ export default function FullVideoStats({stats, createdAt, videId, tips, likes, i
             <TooltipContent>
               <div className='flex items-center gap-2'>
                 <p className='text-2xl'>💡</p>
-                 <p className='text-sm font-semibold'>collecting NFT  requires <span>$PAX</span> Token </p>
+                 <p className='text-sm font-semibold'>collecting NFT  requires <span>$PUR</span> Token </p>
               </div>
             </TooltipContent>
            </Tooltip>
         </TooltipProvider>
  
-           <Dialog>
+           <Dialog >
   <DialogTrigger>
   <div className='items-center gap-2 hover:text-text-primary cursor-pointer flex'>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
@@ -177,11 +179,11 @@ export default function FullVideoStats({stats, createdAt, videId, tips, likes, i
           </div>
 
   </DialogTrigger>
-  <DialogContent>
+  <DialogContent className=''>
     <DialogHeader>
       <DialogTitle className='mb-4 '>Share</DialogTitle>
       <DialogDescription>
-       <ShareButtons url={`${WEBSITE_URL}/watch/${note?.characterId}-${videId}`} />
+       <ShareButtons url={`${WEBSITE_URL}/watch/$${videId}`} />
       </DialogDescription>
     </DialogHeader>
   </DialogContent>

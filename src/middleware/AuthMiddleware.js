@@ -17,7 +17,7 @@ const withAuth = (WrappedComponent) => {
         }, [userProfile, router]);
 
         if (!userProfile) {
-            return "go to login"; // Render a loading spinner or nothing while redirecting
+            return "Redireting to login page "; // Render a loading spinner or nothing while redirecting
         }
 
         return <WrappedComponent {...props} />;

@@ -66,10 +66,20 @@ console.log("channel contents", contents)
         <Tabs defaultValue="content" className="  mt-10 py-2 pl-3 ">
   <TabsList>
     <TabsTrigger value="content">Content</TabsTrigger>
+    <TabsTrigger value="nfts">NFTs</TabsTrigger>
     <TabsTrigger value="badges">Badges</TabsTrigger>
     <TabsTrigger value="about">About</TabsTrigger>
   </TabsList>
   <TabsContent value="content">
+   <VideosTab 
+     video={contents}
+     loading={loading}
+     error={error}
+   />
+ 
+    </TabsContent>
+
+    <TabsContent value="nfts">
    <VideosTab 
      video={contents}
      loading={loading}

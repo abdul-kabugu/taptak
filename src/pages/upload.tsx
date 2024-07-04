@@ -1,8 +1,9 @@
 import Uploadpage from '@/components/uploadPage/Uploadpage'
+import withAuth from '@/middleware/AuthMiddleware'
 import { NextSeo } from 'next-seo'
 import React from 'react'
 
-export default function upload() {
+const  upload = () => {
   return (
       <>
       <NextSeo
@@ -15,3 +16,5 @@ export default function upload() {
    
   )
 }
+
+export default withAuth(upload)

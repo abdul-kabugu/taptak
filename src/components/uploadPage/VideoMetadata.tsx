@@ -1,5 +1,5 @@
 
-
+//@ts-nocheck
 
 import { useRef, useState, useEffect, useMemo } from "react";
 //import { Contract } from "crossbell";
@@ -319,7 +319,7 @@ CHECK VIDEO  DURATION
         try {
           
           const result =  await  axios.post(postEndPoint, {
-            author : "6671317923dc906bc95f494",
+            author : userProfile?.id,
              content : caption,
              title : videoTitle,
              media : assets[0]?.playbackId,

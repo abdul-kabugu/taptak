@@ -1,7 +1,7 @@
-
+//@ts-nocheck
 import React, {useState, useEffect, useRef} from 'react'
 import { ethers, Contract } from 'ethers';
-import ABI from '../../abi/paxfy.json'
+import ABI from '../../abi/rapu.json'
 import { usePinToIpfs } from '@/hooks/usePinToIpfs';
 import { json } from 'stream/consumers';
 import { LuImagePlus } from "react-icons/lu";
@@ -51,7 +51,7 @@ try {
        bio : channelBio,
        avatar : avatarCID?.cid,
        cover : avatarCID?.cid,
-       interests : selectedInterests,
+       //interests : selectedInterests,
     })
 
     console.log("profile updated success", result)

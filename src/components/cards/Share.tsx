@@ -41,8 +41,8 @@ export default function ShareButtons({ url}: any) {
     }
   };
   return (
-    <div>
-      <div className="flex gap-5">
+    <div className="">
+      <div className="flex gap-5 ">
         <TwitterShareButton url={url}>
         <BsTwitterX size={27} />
         </TwitterShareButton>

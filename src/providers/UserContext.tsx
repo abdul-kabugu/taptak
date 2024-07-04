@@ -1,5 +1,5 @@
 
-
+//@ts-nocheck
 import React, { createContext, useState, useContext, useEffect } from 'react';
 import { ethers, Contract } from 'ethers';
 import { GET_USER_PROFILES_BY_ADDRESS } from '@/graphql/fragments/getUserProfiles';

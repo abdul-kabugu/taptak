@@ -18,6 +18,8 @@ import CreateHandleModal from '../common/CreateHandleModal';
 import { usePinToLivepeer } from '@/hooks/usePinToLivepeer';
 import { RiCopperCoinLine } from "react-icons/ri";
 import { useUserContext } from '@/providers/UserContext';
+import CreateTokenModal from '../common/CreateTokenModal';
+import { useEthersSigner } from '@/etherSigner';
 interface authentictedProps {
     address : string 
      handle : string
@@ -28,8 +30,9 @@ interface authentictedProps {
 export default function Authenticated({address, handle, profile, disconnect, xp}: authentictedProps) {
    const  {theme, setTheme} = useTheme()
 const [isShowHandleModal, setisShowHandleModal] = useState(false)
-const {getEndPointUrl, uploadertoTus} = usePinToLivepeer()
+const [isShowTokenModal, setisShowTokenModal] = useState(false)
         const {userProfile} = useUserContext()
+        const signer =  useEthersSigner()
   const  handleToggleTheme = () => {
     if(theme === "dark") {
       setTheme("light")
@@ -77,7 +80,7 @@ const {getEndPointUrl, uploadertoTus} = usePinToLivepeer()
       <PopoverTrigger>
            <div className='flex items-center gap-2   rounded-lg'>
            <div className='w-7 h-7 bg-purple-400 border border-red-400 flex items-center justify-center font-extrabold rounded-full text-white'>
-              P
+              F
            </div>
             <div className='xs:hidden md:block'>
                  <h1 className=' capitalize text-sm leading-none font-semibold hidden md:block'>{profile?.username}</h1>
@@ -144,13 +147,28 @@ const {getEndPointUrl, uploadertoTus} = usePinToLivepeer()
 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
   <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
 </svg>
- <p>Claim handle</p>
+ <p>Edit profile</p>
 </div>
+
+<Link href={`/tokens`}>
+<div className='flex gap-2 items-center cursor-pointer mt-6' >
+
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+</svg>
+ <p>Create token</p>
+</div>
+</Link>
         </div>
        </PopoverContent>
    </Popover>
    <Modal isOpen={isShowHandleModal} closeModal={() => setisShowHandleModal(!isShowHandleModal)} containerClassName=''>
      <CreateHandleModal closeModal={() => setisShowHandleModal(false)}  />
+   </Modal>
+
+   <Modal isOpen={isShowTokenModal} closeModal={() => setisShowTokenModal(!isShowTokenModal)} containerClassName=''>
+   <CreateTokenModal closeModal={() => setisShowTokenModal(false)} address={signer} />
+     
    </Modal>
    </div>
   )

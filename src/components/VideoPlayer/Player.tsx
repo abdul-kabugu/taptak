@@ -1,3 +1,5 @@
+
+//@ts-nocheck
 import type { AspectRatio } from '@livepeer/react'
 import { Player } from '@livepeer/react'
 

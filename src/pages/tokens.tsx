@@ -1,10 +1,13 @@
 import CreateTokensPage from '@/components/CreateTokensPage'
+import withAuth from '@/middleware/AuthMiddleware'
 import React from 'react'
 
-export default function tokens() {
+const tokens = () =>{
   return (
     <div>
         <CreateTokensPage  />
     </div>
   )
 }
+
+export default withAuth(tokens)

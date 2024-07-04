@@ -1,3 +1,5 @@
+
+//@ts-nocheck
 import type { FC } from 'react'
 import React, { useCallback, useEffect, useRef, useState } from 'react'
 

@@ -29,7 +29,7 @@ export default  function  VideoCard({cover, channel, channelId, noteId, createdA
   const diffInHours = diffInMilliseconds / (60 * 60 * 1000);
   const duration = moment.duration(diffInHours, "hours");
   return (
-    <div className={`  aspect-[16/9]   rounded-xl hover:border border-red-500 p-1`}>
+    <div className={`  aspect-[16/9]   rounded-xl hover:border border-gray-200  dark:border-gray-700 p-1`}>
     
         <div className='hover:text-rose-400/90'>
           <Link href={`/watch/${noteId}`}>
